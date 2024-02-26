@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/xiaomi/mt6768-common
+COMMON_PATH := device/samsung/mt6768-common
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
@@ -29,7 +29,7 @@ TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Bootloader
-BOARD_VENDOR := xiaomi
+BOARD_VENDOR := samsung
 TARGET_BOOTLOADER_BOARD_NAME := mt6768
 TARGET_NO_BOOTLOADER := true
 
@@ -59,13 +59,13 @@ BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_xiaomi_mt6768
-TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_mt6768
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_samsung_mt6768
+TARGET_RECOVERY_DEVICE_MODULES := libinit_samsung_mt6768
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6768
+TARGET_KERNEL_SOURCE := kernel/samsung/mt6768
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r450784d
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -174,4 +174,4 @@ BOARD_VNDK_VERSION := current
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit the proprietary files
-include vendor/xiaomi/mt6768-common/BoardConfigVendor.mk
+include vendor/samsung/mt6768-common/BoardConfigVendor.mk
